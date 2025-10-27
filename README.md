@@ -130,23 +130,6 @@ anchor deploy --provider.cluster devnet
 
 ---
 
-## Client Usage (JavaScript)
-
-```ts
-const [counterPDA] = anchor.web3.PublicKey.findProgramAddressSync(
-  [Buffer.from("counter"), user.publicKey.toBuffer()],
-  program.programId
-);
-
-await program.methods
-  .initialize(new anchor.BN(20))
-  .accounts({ counter: counterPDA, authority: user.publicKey })
-  .signers([user])
-  .rpc();
-```
-
----
-
 ## Troubleshooting
 
 | Issue                      | Fix |
