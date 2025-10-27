@@ -168,5 +168,3 @@ await program.methods
 
 **Built with ❤️ on Solana**  
 ```
-
-
